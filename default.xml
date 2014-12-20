@@ -2,13 +2,16 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch="https://android.googlesource.com/" />
+           fetch="https://android.googlesource.com/" 
+           revision="refs/tags/android-5.0.1_r1" />
+
   <default revision="refs/tags/android-5.0.1_r1"
            remote="aosp"
            sync-j="4" />
 
   <remote  name="nerull7"
-           fetch="https://github.com/nerull7/" />
+           fetch="https://github.com/nerull7/" 
+           revision="lollipop"/>
 
   <project path="build" name="platform/build" groups="pdk,tradefed" remote="nerull7" revision="lollipop" >
     <copyfile src="core/root.mk" dest="Makefile" />
